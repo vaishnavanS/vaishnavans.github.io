@@ -62,7 +62,7 @@ function App() {
             {/* Navigation */}
             <nav className="navbar glass-card">
                 <div className="nav-logo">
-                    <span className="text-gradient">V</span>AISHNAVAN
+                    <span className="text-gradient">Hi</span>There 👋
                 </div>
                 <ul className="nav-links">
                     {['home', 'contact', 'about', 'skills', 'projects'].map((item) => (
