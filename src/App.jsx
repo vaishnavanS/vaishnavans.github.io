@@ -145,7 +145,7 @@ function App() {
 
             {/* Skills Section */}
             <section id="skills" className="skills-section">
-                <h2 className="section-title"><span className="text-gradient">//</span> My Arsenal</h2>
+                <h2 className="section-title"><span className="text-gradient">//</span> Tech Stack</h2>
                 <div className="skills-grid">
                     {Object.entries(skills).map(([category, items]) => (
                         <div key={category} className="skill-category glass-card fade-in">
