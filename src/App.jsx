@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import StatsCard from './StatsCard';
+import FoxMascot from './FoxMascot';
+import OwlMascot from './OwlMascot';
 
 function App() {
     const [activeSection, setActiveSection] = useState('home');
 
     useEffect(() => {
         const handleScroll = () => {
-            const sections = ['home', 'contact', 'about', 'skills', 'projects'];
+            const sections = ['home', 'contact', 'about', 'skills', 'stats', 'projects'];
             const scrollPosition = window.scrollY + 100;
 
             for (const section of sections) {
@@ -65,7 +68,7 @@ function App() {
                     <span className="text-gradient">Hi There </span> 👋
                 </div>
                 <ul className="nav-links">
-                    {['home', 'contact', 'about', 'skills', 'projects'].map((item) => (
+                    {['home', 'contact', 'about', 'skills', 'stats', 'projects'].map((item) => (
                         <li key={item}>
                             <a
                                 href={`#${item}`}
@@ -83,13 +86,22 @@ function App() {
 
             {/* Hero Section */}
             <section id="home" className="hero-section">
-                <div className="hero-content fade-in">
-                    <h1 className="hero-title">
-                        I'm <span className="text-gradient">Vaishnavan S</span>
-                    </h1>
-                    <p className="hero-tagline">
-                        Cyber Security Enthusiast | Full Stack Developer | AI/ML Explorer
-                    </p>
+                <div className="hero-layout">
+                    <div className="hero-content fade-in">
+                        <p className="hero-kicker">$ whoami</p>
+                        <h1 className="hero-title">
+                            I'm <span className="text-gradient">Vaishnavan S</span>
+                        </h1>
+                        <p className="hero-tagline">
+                            cyber security // full stack // still learning
+                        </p>
+                        <div className="hero-stats-row">
+                            <span className="hero-chip">building things that (mostly) don't break</span>
+                        </div>
+                    </div>
+                    <div className="hero-mascot fade-in">
+                        <FoxMascot />
+                    </div>
                 </div>
             </section>
 
@@ -132,14 +144,22 @@ function App() {
             {/* About Section */}
             <section id="about" className="about-section">
                 <h2 className="section-title"><span className="text-gradient">//</span> About Me</h2>
-                <div className="glass-card about-card fade-in">
-                    <p>
-                        I am a Computer Science and Engineering (Cyber Security) student with a strong interest in building secure systems, full-stack web applications, and AI-powered solutions. I focus on solving real-world problems through practical projects rather than just theoretical learning. My areas of interest include cybersecurity, AI safety, and intelligent automation.
-                    </p>
-                    <div className="institution-info">
-                        <strong>Sri Shakthi Institute of Engineering and Technology</strong>
-                        <span>Batch: 2024 – 2028</span>
+                <div className="about-layout fade-in">
+                    <div className="about-illustration">
+                        <OwlMascot />
                     </div>
+                    <div className="about-text">
+                        <p>
+                            I am a Computer Science and Engineering (Cyber Security) student with a strong interest in building secure systems, full-stack web applications, and AI-powered solutions. I focus on solving real-world problems through practical projects rather than just theoretical learning. My areas of interest include cybersecurity, AI safety, and intelligent automation.
+                        </p>
+                        <div className="institution-info">
+                            <strong>Sri Shakthi Institute of Engineering and Technology</strong>
+                            <span>Batch: 2024 – 2028</span>
+                        </div>
+                    </div>
+                </div>
+                <div className="pulled-callout">
+                    <p>curious by default, careful by design</p>
                 </div>
             </section>
 
@@ -159,6 +179,9 @@ function App() {
                     ))}
                 </div>
             </section>
+
+            {/* Live Stats Section */}
+            <StatsCard />
 
             {/* Projects Section */}
             <section id="projects" className="projects-section">

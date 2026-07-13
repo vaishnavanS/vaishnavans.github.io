@@ -54,14 +54,41 @@
 
 /* Hero */
 .hero-section {
-    min-height: 50vh;
+    min-height: 60vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
     padding-top: 80px;
-    padding-bottom: 0;
+    padding-bottom: 40px;
+}
+
+.hero-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1100px;
+    width: 100%;
+    text-align: left;
+}
+
+.hero-mascot {
+    flex-shrink: 0;
+    width: 260px;
+}
+
+.fox-mascot {
+    width: 100%;
+    height: auto;
+}
+
+.hero-kicker {
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    color: var(--accent-primary);
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
 }
 
 .role-chip {
@@ -77,17 +104,48 @@
 }
 
 .hero-title {
-    font-size: clamp(3rem, 8vw, 5rem);
+    font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 20px;
 }
 
 .hero-tagline {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--text-secondary);
-    max-width: 600px;
-    margin: 0 auto 20px;
+    max-width: 500px;
+    margin: 0 0 20px;
+    text-transform: lowercase;
+    font-family: var(--font-main);
+}
+
+.hero-stats-row {
+    margin-bottom: 10px;
+}
+
+.hero-chip {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    text-transform: lowercase;
+    font-family: monospace;
+}
+
+@media (max-width: 768px) {
+    .hero-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-tagline {
+        margin: 0 auto 20px;
+    }
+    .hero-mascot {
+        width: 200px;
+    }
 }
 
 .hero-actions {
@@ -167,11 +225,50 @@
 }
 
 /* About */
-.about-card {
-    padding: 40px;
+.about-layout {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-illustration {
+    flex-shrink: 0;
+    width: 180px;
+}
+
+.owl-mascot {
+    width: 100%;
+    height: auto;
+}
+
+.about-text {
+    flex: 1;
     font-size: 1.1rem;
     line-height: 1.8;
     color: var(--text-secondary);
+}
+
+.pulled-callout {
+    margin-top: 40px;
+    padding-left: 20px;
+    border-left: 2px solid var(--accent-secondary);
+}
+
+.pulled-callout p {
+    font-family: monospace;
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    text-transform: lowercase;
+}
+
+@media (max-width: 768px) {
+    .about-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-illustration {
+        width: 140px;
+    }
 }
 
 .institution-info {
@@ -182,6 +279,60 @@
     color: var(--text-primary);
     border-left: 2px solid var(--accent-primary);
     padding-left: 20px;
+}
+
+/* Stats */
+.stats-section {
+    padding: 80px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-primary);
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    text-transform: lowercase;
+    letter-spacing: 0.5px;
+    color: var(--text-secondary);
+    font-family: var(--font-main);
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+    font-family: var(--font-heading);
+}
+
+.stat-value-small {
+    font-size: 1.1rem;
+}
+
+.stats-note {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
 }
 
 /* Skills */
