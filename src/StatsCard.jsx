@@ -62,7 +62,7 @@ function StatsCard() {
 
     return (
         <section id="stats" className="stats-section">
-            <h2 className="section-title"><span className="text-gradient">//</span> Live stats</h2>
+            <h2 className="section-title">Live stats</h2>
             <div className="stats-grid">
                 <a
                     href={`https://github.com/${GITHUB_USERNAME}`}

@@ -1,9 +1,9 @@
 import React from 'react';
 
-function FoxMascot() {
+function FoxMascot({ visitorName = "vaishnavan" }) {
     return (
         <svg
-            viewBox="0 0 400 400"
+            viewBox="60 90 280 295"
             xmlns="http://www.w3.org/2000/svg"
             role="img"
             aria-label="Illustration of a fox wearing a hoodie, sitting with a laptop open to a terminal"
@@ -33,7 +33,7 @@ function FoxMascot() {
             <rect x="120" y="280" width="160" height="100" rx="8" fill="#3a3a3a" stroke="#0f0f0f" strokeWidth="3" />
             <rect x="132" y="292" width="136" height="76" rx="4" fill="#141414" stroke="#0f0f0f" strokeWidth="2" />
             <text x="140" y="315" fontFamily="monospace" fontSize="12" fill="#00f2ff">$ whoami</text>
-            <text x="140" y="333" fontFamily="monospace" fontSize="12" fill="#00f2ff">vaishnavan</text>
+            <text x="140" y="333" fontFamily="monospace" fontSize="12" fill="#00f2ff">{visitorName}</text>
             <text x="140" y="351" fontFamily="monospace" fontSize="12" fill="#e8621f">_</text>
         </svg>
     );
