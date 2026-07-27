@@ -521,7 +521,7 @@ function App() {
             </section>
 
             <footer className="footer">
-                <p>Stay Hard</p>
+                <p></p>
             </footer>
         </div>
     );
